@@ -25,7 +25,8 @@ export default class App {
         document.body.appendChild(renderer.domElement);
 
         this._scene = new THREE.Scene();
-        this._camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, NEAR, FAR);
+        const camera = this._camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, NEAR, FAR);
+        camera.position.setY(1.6);
     }
 
     _createScene() {
