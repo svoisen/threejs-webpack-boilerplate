@@ -42,6 +42,8 @@ export default class App {
         const renderer = this._renderer;
 
         renderer.render(scene, camera);
+
+        requestAnimationFrame(this._render);
     }
 
     _handleResize(event) {
